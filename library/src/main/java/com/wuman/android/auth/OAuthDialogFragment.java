@@ -275,7 +275,7 @@ class OAuthDialogFragment extends DialogFragmentCompat {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 WebView wv = (WebView) v;
-                if (keyCode == KeyEvent.KEYCODE_BACK && wv.canGoBack()) {
+                if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP && wv.canGoBack()) {
                     wv.goBack();
                     return true;
                 }
