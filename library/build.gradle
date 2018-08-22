@@ -24,7 +24,7 @@ android {
   }
 }
 
-apply plugin: "android-unit-test"
+//apply plugin: "android-unit-test"
 
 dependencies {
     compile 'com.android.support:support-v4:19.1.0'
