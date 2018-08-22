@@ -303,7 +303,7 @@ class OAuthDialogFragment extends DialogFragmentCompat {
             public void onProgressChanged(WebView view, int newProgress) {
                 super.onProgressChanged(view, newProgress);
                 if (newProgress != 0 && newProgress != 100) {
-                    setProgressShown(view.getUrl(), getView(), newProgress);
+                    //setProgressShown(view.getUrl(), getView(), newProgress);
                 }
             }
 
@@ -322,13 +322,13 @@ class OAuthDialogFragment extends DialogFragmentCompat {
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 LOGGER.info("onPageStarted: " + url);
                 if (!interceptUrlCompat(view, url, false)) {
-                    setProgressShown(url, getView(), 0);
+                    //setProgressShown(url, getView(), 0);
                 }
             }
 
             @Override
             public void onPageFinished(WebView view, String url) {
-                setProgressShown(url, getView(), 100);
+                //setProgressShown(url, getView(), 100);
             }
 
             @Override
